@@ -129,8 +129,9 @@ var editTask = function(taskId) {
   var taskType = taskSelected.querySelector("span.task-type").textContent;
   document.querySelector("select[name='task-type']").value = taskType;
 
-  // change button to say save task
+  // change button to say "save task"
   document.querySelector("#save-task").textContent = "Save Task";
+  formEl.setAttribute("data-task-id", taskId);
 }
 
 pageContentEl.addEventListener("click", taskButtonHandler);
